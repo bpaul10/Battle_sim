@@ -52,6 +52,7 @@ while player_hp > 0 and boss_hp > 0:
 
     action = input("Choose your action: ")
 
+    #if and elif statements based off the input provided
     if action == "1":
         #damage will be a random number inbetween the attack stat with a range of +-3
         damage = random.randint(attack-3, attack+3) 
@@ -76,7 +77,7 @@ while player_hp > 0 and boss_hp > 0:
         print("Yayy you defeated the boss, you win")
         break
 
-    
+    #using random to generate random damage based off bosses stats
     if random.randint(1,4) == 1:
         damage = random.randint(boss_special-5, boss_special)
         print(boss_name, "used its speical attack")
@@ -86,5 +87,6 @@ while player_hp > 0 and boss_hp > 0:
     player_hp -= damage
     print(boss_name, "dealt", damage, "damage to ", player)
 
+#lose condition
 if player_hp <0:
     print("\n You lost the name is over ", boss_name, "defeated you")
